@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class FirstViewController: UIViewController {
+class CountryListViewController: UIViewController {
   
   @IBOutlet var tableView: UITableView!
   
@@ -34,7 +34,7 @@ class FirstViewController: UIViewController {
   }
 }
 
-extension FirstViewController: UITableViewDataSource {
+extension CountryListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return countries?.count ?? 0
   }
@@ -43,13 +43,18 @@ extension FirstViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! CurrencyCell
     if let country = countries?[indexPath.row] {
       cell.nameLabel.text = country.name
-      cell.capitalLabel.text = "Capital: \(country.capital)"
+        if country.capital == "" {
+            cell.capitalLabel.text = "Capital: - "
+        }
+        else{
+            cell.capitalLabel.text = "Capital: \(country.capital)"
+        }
       cell.flagImageView.kf.setImage(with: URL(string: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png"))
     }
     return cell
   }
 }
 
-extension FirstViewController: UITableViewDelegate {
+extension CountryListViewController: UITableViewDelegate {
   
 }

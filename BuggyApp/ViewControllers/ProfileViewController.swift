@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController ,UITextFieldDelegate{
+class ProfileViewController: UIViewController ,UITextFieldDelegate{
    
     @IBOutlet weak var inputText: UITextField!
     

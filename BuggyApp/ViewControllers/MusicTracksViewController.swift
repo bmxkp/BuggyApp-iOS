@@ -40,17 +40,10 @@ class MusicTracksViewController: UIViewController {
     if segue.identifier == "showDetail" {
       let viewController = segue.destination as? MusicTrackDetailViewController
       let indexPath = tableView.indexPathForSelectedRow
-//      let selectedTrack = sender as? Track {
-//      viewController.track = selectedTrack
-//    }
-        
+        if let indexPath = indexPath {
+            viewController?.track = tracks[(indexPath as NSIndexPath).row]
+        }
   }
-    
-}
-let vc = segue.destination as! DetailViewController
-let indexPath = todoTableView.indexPathForSelectedRow
-if let indexPath = indexPath {
-    vc.todo = todos[(indexPath as NSIndexPath).row]
 }
 }
 
@@ -65,11 +58,6 @@ extension MusicTracksViewController: UITableViewDataSource {
     }
     let track: Track = tracks[indexPath.item]
      cell.configCell(track: track)
-//    cell.nameLabel.text = country.name
-//    cell.capitalLabel.text = "Capital: \(country.capital)"
-//    cell.flagImageView.kf.setImage(with: URL(string: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png"))
-//    }
-    
     return cell
   }
 }
