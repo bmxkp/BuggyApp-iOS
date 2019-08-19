@@ -24,6 +24,7 @@
 		BFEFE83222C621DC00A3B7EB /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEFE82C22C621DC00A3B7EB /* First.storyboard */; };
 		BFEFE83322C621DC00A3B7EB /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEFE82E22C621DC00A3B7EB /* Second.storyboard */; };
 		BFEFE83422C621DC00A3B7EB /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEFE83022C621DC00A3B7EB /* Third.storyboard */; };
+		C0603086230A9A1E0012DBB0 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0603085230A9A1E0012DBB0 /* ProfileDetailViewController.swift */; };
 		F08174CB247441A80243B657 /* Pods_BuggyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662E6907135100BC9FA04336 /* Pods_BuggyAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		BFEFE82D22C621DC00A3B7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/First.storyboard; sourceTree = "<group>"; };
 		BFEFE82F22C621DC00A3B7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Second.storyboard; sourceTree = "<group>"; };
 		BFEFE83122C621DC00A3B7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Third.storyboard; sourceTree = "<group>"; };
+		C0603085230A9A1E0012DBB0 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				AE2873C922CA8B7B004B4671 /* MusicTracksViewController.swift */,
 				AE2873CB22CA8BA7004B4671 /* MusicTrackDetailViewController.swift */,
 				BF1E2B4122C5D69500C65524 /* ThirdViewController.swift */,
+				C0603085230A9A1E0012DBB0 /* ProfileDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				AE2873CC22CA8BA7004B4671 /* MusicTrackDetailViewController.swift in Sources */,
 				AE2873CA22CA8B7B004B4671 /* MusicTracksViewController.swift in Sources */,
 				AE2873C822CA78E0004B4671 /* TrackTableViewCell.swift in Sources */,
+				C0603086230A9A1E0012DBB0 /* ProfileDetailViewController.swift in Sources */,
 				BFEFE82222C60BFF00A3B7EB /* ApiManager.swift in Sources */,
 				BFEFE82622C615A400A3B7EB /* CurrencyCell.swift in Sources */,
 				BF1E2B4222C5D69500C65524 /* ThirdViewController.swift in Sources */,

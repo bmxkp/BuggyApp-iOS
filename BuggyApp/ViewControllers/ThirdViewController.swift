@@ -8,9 +8,32 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-  override func viewDidLoad() {
+class ThirdViewController: UIViewController ,UITextFieldDelegate{
+   
+    @IBOutlet weak var inputText: UITextField!
+    
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
+        self.inputText.delegate = self
+
     // Do any additional setup after loading the view.
   }
-}
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                if textField == inputText {
+                    textField.resignFirstResponder()
+                    print("jdsfnkm")
+                    return false
+                }
+                return true
+            }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailName" {
+            let vc = segue.destination as! ProfileDetailViewController
+            vc.titleText = inputText.text!
+            
+        }
+    }
+    
+    }

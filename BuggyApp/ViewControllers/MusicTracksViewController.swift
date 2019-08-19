@@ -42,6 +42,10 @@ class MusicTracksViewController: UIViewController {
       let selectedTrack = sender as? Track {
       viewController.track = selectedTrack
     }
+    let indexPath = todoTableView.indexPathForSelectedRow
+    if let indexPath = indexPath {
+        vc.todo = todos[(indexPath as NSIndexPath).row]
+    }
   }
 }
 
