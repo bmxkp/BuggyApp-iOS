@@ -80,6 +80,7 @@
                                             <outlet property="artworkImageView" destination="F7m-Ua-SuA" id="JqL-aX-oEb"/>
                                             <outlet property="priceLabel" destination="MGF-sj-HIA" id="xmh-mo-289"/>
                                             <outlet property="trackLabel" destination="Ttf-K6-1HC" id="eyY-gU-JZz"/>
+                                            <segue destination="cUH-eN-7PC" kind="show" identifier="showDetail" id="t46-qH-8LY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -101,7 +102,6 @@
                     <navigationItem key="navigationItem" title="Taylor Swift" id="KBZ-lf-RA3"/>
                     <connections>
                         <outlet property="tableView" destination="jxy-YT-Xsr" id="eIn-5C-mWv"/>
-                        <segue destination="cUH-eN-7PC" kind="show" identifier="showDetail" id="uJn-o4-xRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

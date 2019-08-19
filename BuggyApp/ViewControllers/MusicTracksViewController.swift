@@ -37,16 +37,21 @@ class MusicTracksViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showDetail",
-      let viewController = segue.destination as? MusicTrackDetailViewController,
-      let selectedTrack = sender as? Track {
-      viewController.track = selectedTrack
-    }
-    let indexPath = todoTableView.indexPathForSelectedRow
-    if let indexPath = indexPath {
-        vc.todo = todos[(indexPath as NSIndexPath).row]
-    }
+    if segue.identifier == "showDetail" {
+      let viewController = segue.destination as? MusicTrackDetailViewController
+      let indexPath = tableView.indexPathForSelectedRow
+//      let selectedTrack = sender as? Track {
+//      viewController.track = selectedTrack
+//    }
+        
   }
+    
+}
+let vc = segue.destination as! DetailViewController
+let indexPath = todoTableView.indexPathForSelectedRow
+if let indexPath = indexPath {
+    vc.todo = todos[(indexPath as NSIndexPath).row]
+}
 }
 
 extension MusicTracksViewController: UITableViewDataSource {
@@ -59,7 +64,12 @@ extension MusicTracksViewController: UITableViewDataSource {
       return UITableViewCell()
     }
     let track: Track = tracks[indexPath.item]
-    cell.configCell(track: track)
+     cell.configCell(track: track)
+//    cell.nameLabel.text = country.name
+//    cell.capitalLabel.text = "Capital: \(country.capital)"
+//    cell.flagImageView.kf.setImage(with: URL(string: "https://www.countryflags.io/\(country.alpha2Code)/flat/64.png"))
+//    }
+    
     return cell
   }
 }
@@ -72,4 +82,9 @@ extension MusicTracksViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
   }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        tableView.setEditing(editing, animated: true)
+    }
 }
